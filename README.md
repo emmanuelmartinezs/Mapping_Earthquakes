@@ -1,12 +1,12 @@
 # Mapping Earthquakes 
 ## Overview of Project
-> Roza has a partially completed dashboard that she needs to finish. She has a completed panel for demographic information and now needs to visualize the bacterial data for each volunteer. Specifically, her volunteers should be able to identify the top 10 bacterial species in their belly buttons. That way, if Improbable Beef identifies a species as a candidate to manufacture synthetic beef, Roza's volunteers will be able to identify whether that species is found in their navel.
+> Basil and Sadhana like how you created your earthquake map with two different maps and the earthquake overlay. Now, Basil and Sadhana would like to see the earthquake data in relation to the tectonic plates’ location on the earth, and they would like to see all the earthquakes with a magnitude greater than 4.5 on the map, and they would like to see the data on a third map.
 
-1. ***Deliverable 1***: Create a Horizontal Bar Chart
-2. ***Deliverable 2***: Create a Bubble Chart
-3. ***Deliverable 3***: Create a Gauge Chart
-4. ***Deliverable 4***: Customize the Dashboard
-5. ***Deliverable 5***: A written report on the Mapping Earthquakes analysis [`README.md`](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/). 
+1. ***Deliverable 1***: Add Tectonic Plate Data
+2. ***Deliverable 2***: Add Major Earthquake Data
+3. ***Deliverable 3***: Add an Additional Map
+4. ***Deliverable 4***: A written report on the Mapping Earthquakes analysis [`README.md`](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/). 
+5. ***EXTRA 5***: Enable IO Page for [`Mapping Earthquakes`](https://emmanuelmartinezs.github.io/Mapping_Earthquakes/) analysis. 
 
 ## Resources and Before Start Notes:
 
