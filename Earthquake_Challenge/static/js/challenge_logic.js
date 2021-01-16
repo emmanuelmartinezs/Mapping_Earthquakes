@@ -1,3 +1,7 @@
+// COLUMBIA ENGINEERING 
+// By Emmanuel Martinez
+// Module 13
+
 // Add console.log to check to see if our code is working.
 console.log("working");
 
@@ -35,6 +39,14 @@ let baseMaps = {
   "Satellite": satelliteStreets,
   "Dark": dark
 };
+
+
+
+// DELIVERABLE 1
+// By Emmanuel Martinez
+// Module 13
+
+
 
 // 1. Add a 2nd layer group for the tectonic plate data.
 let allEarthquakes = new L.LayerGroup();
@@ -119,7 +131,15 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
   // Then we add the earthquake layer to our map.
   allEarthquakes.addTo(map);
 
-// 3. Retrieve the major earthquake GeoJSON data >4.5 mag for the week.
+
+
+
+
+
+
+
+
+// 3. Use d3.json to make a call to get our Tectonic Plate geoJSON data.
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson").then(function(data) {
 
 // 4. Use the same style as the earthquake data.
@@ -178,7 +198,15 @@ majorEarthquakes.addTo(map);
 // 9. Close the braces and parentheses for the major earthquake data.
 });
 
-  // Here we create a legend control object.
+
+
+
+
+
+
+
+
+// Here we create a legend control object.
 let legend = L.control({
   position: "bottomright"
 });
