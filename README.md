@@ -11,25 +11,27 @@
 ## Resources and Before Start Notes:
 
 * Data Source: `BellyButton_bar_chart_starter_code.js`, `BellyButton_bubble_chart_starter_code.js`, `BellyButton_bubble_chart_starter_code.js` and `index.html`
-* Data Tools: ECMAScript, JavaScript, JSON and IO (Web Server)
+* Data Tools: JavaScript, JSON, GeoJSON and IO (Web Server)
 * Software: ES6+, ECMAScript and Visual Studio Code 1.50.0
 
-For more information, read the [`Documentation on Plotly.js Basic Charts`](https://plotly.com/javascript/basic-charts/). 
-And for more information, read the [`CORS Documentation`](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS). 
+For more information, visit [`The Mapbox API`](https://www.mapbox.com/pricing/?utm_medium=blog&utm_source=mapbox-blog&utm_campaign=blog%7Cmapbox-blog%7Cpricing%7Cnew-pricing-46b7c26166e7-19-05&utm_term=pricing&utm_content=new-pricing-46b7c26166e7/). 
 
-## Overview of ES6+
-ECMAScript, also referred to as "ES," is a scripting language designed to help standardize JavaScript. This means that ES provides guidelines and rules for JavaScript to follow, such as how a function should be created to run correctly, also known as the **proper syntax**.
 
-Because ES has provided standardization for JavaScript, it also brings updates to the language. There are updates to every major coding language that fix bugs, update code, and provide overall quality of life improvements for the developers. ES6 is no exception!
+## Tech-Overview
+In this module, you will use the Leaflet.js Application Programming Interface (API) to populate a geographical map with GeoJSON earthquake data from a URL. Each earthquake will be visually represented by a circle and color, where a higher magnitude will have a larger diameter and will be darker in color. In addition, each earthquake will have a popup marker that, when clicked, will show the magnitude of the earthquake and the location of the earthquake.
 
-There have been many updates to ES over the years, though the sixth update was a major one. You'll probably see "ES6+" mentioned out in the wild pretty often; this is a reference to the "big" update (ES6) as well as the later ones. It's also commonly known as "ES2015" or "ECMAScript 2015." (It was such an important update that it's even known by its year!) There are quite a few different ways to reference this language, but we'll be referring to it as ES6, JavaScript, or JS in this project.
+## Basic Project Plan
 
-## Benefits of the ES6 Update
-We've briefly mentioned that the ES6 update was useful, but let's talk a bit more about why it was such a big deal.
+**Purpose**
+The purpose of this project is to visually show the differences between the magnitudes of earthquakes all over the world for the last seven days.
 
-Imagine two laptops, one old and one new, side by side. They're similar enough: they're close in size and shape and can complete many of the same tasks, but the newer laptop has an edge. It is faster and can perform tasks with greater efficiency than the older model.
+**Tasks**
+To complete this project, use a URL for GeoJSON earthquake data from the USGS website and retrieve geographical coordinates and the magnitudes of earthquakes for the last seven days. Then add the data to a map.
 
-JavaScript after the ES6 update is like the newer computer. This update included many updates to the syntax, which streamlined the code and made it easier to both read and write. Additional, quality of life improvements were implemented as well, such as adding Python-like generators and `for...of` loops. Even functions were updated and streamlined!
+**Approach**
+Your approach will be to use the JavaScript and the D3.js library to retrieve the coordinates and magnitudes of the earthquakes from the GeoJSON data. You'll use the Leaflet library to plot the data on a Mapbox map through an API request and create interactivity for the earthquake data.
+
+Now that you have an overview of the project plan, let's set up a Mapbox account and get the API token you'll need to create geographical maps.
 
 # Functional JavaScript
 
