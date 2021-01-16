@@ -6,7 +6,7 @@
 2. ***Deliverable 2***: Add Major Earthquake Data
 3. ***Deliverable 3***: Add an Additional Map
 4. ***Deliverable 4***: A written report on the Mapping Earthquakes analysis [`README.md`](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/). 
-5. ***EXTRA 5***: Enable IO Page for [`Mapping Earthquakes`](https://emmanuelmartinezs.github.io/Mapping_Earthquakes/) analysis. 
+ 
 
 ## Resources and Before Start Notes:
 
@@ -519,16 +519,6 @@ A written report on the Mapping Earthquakes analysis [`README.md`](https://githu
 
 
 1. **A README.md that describes the purpose of the repository. Although there is no graded written analysis for this challenge, it is encouraged and good practice to add a brief description of your project.**
-
-
-# ***EXTRA 5***: 
-Enable IO Page for [`Mapping Earthquakes`](https://emmanuelmartinezs.github.io/Mapping_Earthquakes/) analysis. 
-
-
-> Please visit the Site below to intercat with the Data!
-
-[`Mapping Earthquakes`](https://emmanuelmartinezs.github.io/Mapping_Earthquakes/). 
-
 
 
 ##### JavaScript, Bootstrap, and Mapping Earthquakes Analysis Completed by Emmanuel Martinez
