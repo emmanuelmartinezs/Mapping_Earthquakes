@@ -33,68 +33,37 @@ Your approach will be to use the JavaScript and the D3.js library to retrieve th
 
 Now that you have an overview of the project plan, let's set up a Mapbox account and get the API token you'll need to create geographical maps.
 
-# Functional JavaScript
+# The Leaflet JavaScript Library
+On the [`Leaflet`](https://leafletjs.com/index.html) homepage, scroll midpage and click the [`Leaflet Quick Start Guide`](https://leafletjs.com/examples/quick-start/) link:
 
-## The map() Method
+![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/s1.png?raw=true)
 
-The `map()` method in JavaScript applies a transformation to each element in an array. Like a for loop, it can perform an operation to every element of an array.
+The Leaflet Quick Start Guide provides steps for setting up a Leaflet map. To begin, scroll midpage to the "Preparing your page" section:
 
-Here is an example in which all the numbers of an array are doubled:
+![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/s2.png?raw=true)
 
-````java
-var numbers = [1,2,3,4,5];
-var doubled = numbers.map(function(num){
-    return num * 2;
-});
-console.log(doubled);
-````
-
-In this code, an array named `numbers` contains five integers:`var numbers = [1,2,3,4,5];`. Let's break down the rest of the code in more detail:
-
-- The `numbers` array calls the `map()` method.
-- Inside the `map()` method, there is another function. This function is anonymous, meaning that the function does not have a name. When `map()` is called, it in turn calls this anonymous function.
-- The anonymous function takes a parameter, named `num`, and returns the number multiplied by 2. Its sole task is to perform this single action.
-- For every element in the array, the `map()` method calls the anonymous function, which doubles the value of the element.
-- The `map()` method returns an array of doubled values, which is assigned the variable `doubled`.
-
-Here, the `map()` function becomes a method of the `numbers` array. It then takes in an anonymous function whose sole task is to double the value of num, its argument.
-
-Behind the scenes, an iterative process similar to a `for` loop takes place. The anonymous function takes in each integer of the `numbers` array and doubles it. Finally, the variable `doubled` is an array of integers whose values are twice their original values.
-
-Try running the code in your browser console and view the results for doubled. You should see the following:
-
-![name-of-you-image](https://github.com/emmanuelmartinezs/Plotly/blob/main/Resources/Images/s1.png?raw=true)
+The "Preparing your page" section includes links and HTML code that we'll add to our [`Mapping Earthquakes - index.html`](https://emmanuelmartinezs.github.io/Mapping_Earthquakes/) page. 
 
 
-## The filter() Method
+## Use the Leaflet Documentation
+The [`Leaflet Quick Start Guide`](https://leafletjs.com/examples/quick-start/) provides the `tileLayer()` code:
 
-Another functional programming technique is the `filter()` method. Like the map() method, it accepts another function as its parameter. Like `map()`, `filter()` performs an operation on every element in the original array. Unlike `map()`, however, `filter()` does not necessarily return an array whose length is the same as the original array.
+![name-of-you-image](https://github.com/emmanuelmartinezs/Mapping_Earthquakes/blob/main/Resources/Images/s3.png?raw=true)
 
-Let's see what this means in an example. Run the following code in your console. What does `larger` return?
+
+We can copy this tile layer code and assign it to the streets variable, since the tile layer will create a street-level map. Add the following code block to your `logic.js` file:
 
 ````java
-var numbers = [1,2,3,4,5];
-
-var larger = numbers.filter(function(num){
-    return num > 1;
+// We create the tile layer that will be the background of our map.
+let streets = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: API_KEY
 });
-
-console.log(larger);
+// Then we add our 'graymap' tile layer to the map.
+streets.addTo(map);
 ````
-
-It returns an array of integers that are larger than 1: `[2,3,4,5]`.This example is remarkably similar to the last one, with one major difference.
-
-First, the similarities:
-
-- The `numbers` array uses the `filter()` method.
-- The `filter()` method, in turn, takes an anonymous function as its argument. The anonymous function's sole task is to take in a parameter, called `num`.
-
-The `filter()` method operates on each element of the `numbers` array. So how does it differ from `map()`?
-
-The `map()` method transforms every element of the original array, and so the size of the transformed array is the same as that of the original array.
-
-The `filter()` method, on the other hand, returns an array of values that meet certain criteria. Values in the original array that do not fulfill the condition are filtered out. In this case, specifically, the anonymous function called by `filter()` returns `true` if an argument is larger than 1, and false if it does not. The `filter()` method runs the anonymous function on every element of the original `numbers` array. Only numbers that are larger than 1 are returned: `[2,3,4,5]`. So whereas applying `map()` to the numbers array would have returned an array with five elements, applying this specific filter returned an array of only four elements.
-
 
 ## The Arrow Functions
 
