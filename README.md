@@ -65,42 +65,6 @@ attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStree
 streets.addTo(map);
 ````
 
-## The Arrow Functions
-
-Let's do a quick review of arrow functions. An arrow function in JavaScript is syntactic sugar. That is, an arrow function does the same thing as a standard JavaScript function, but it streamlines the syntax used to accomplish the same task.  
-
-The anonymous function inside `map()` and `filter()` can be simplified as an arrow function. Here's an example:
-
-````java
-var numbers = [1,2,3,4,5];
-
-
-var doubled = numbers.map(num => num * 2);
-console.log(doubled);
-````
-
-The `map()` method performs the identical operation as before: it doubles each element in the `numbers` array. However, the anonymous function inside `map()` has been replaced by an arrow function. Contrast the two:
-
-````java
-var familyAge = [3,2,39,37,9];
-var sortedAge = familyAge.sort((a,b) => a - b);
-console.log(sortedAge);
-````
-
-`sortedAge` returns the array `[2,3,9,37,39]`. Like `map()` and `filter()`, `sort()` takes in an anonymous function. During each iteration, the anonymous function, an arrow function in this case, compares one element of the array `(a)` with another element in the array `(b)`. From `a`, it subtracts `b`. If the result is negative (i.e., `b` is larger than `a`) then it stays put. If the result of the subtraction is positive, the order of the two elements is reversed. Look at a modified version of this example.
-
-
-## The slice() Method
-
-Roza also needs to be able to select a subset of the data. In her project, for example, she might perform a transformation on an array, filter it, sort it, and then display only the top five results.
-
-````java
-var integers = [0,1,2,3,4,5];
-var slice1 = integers.slice(0,2);
-````
-
-In this example, the `slice()` method returns the first two elements of the `integer` array: `[0,1]`. The first argument is the position of where to begin the selection. Here, it is at index position 0. The next argument, 2, denotes the position of the array where the slicing ceases. In other words, the `slice()` method begins selecting the array at index position 0, and stops right before reaching index position 2. So here, it returns elements at index positions 0 and 1, but not 2.
-
 > Let's move on!
 
 # Deliverable 1:  
